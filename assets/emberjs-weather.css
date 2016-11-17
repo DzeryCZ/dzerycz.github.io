@@ -1,0 +1,105 @@
+/* Main styles */
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #000;
+    font-family: "Roboto", Verdana;
+    font-weight: 300;
+}
+.container:before{
+    content: "";
+    display: block;
+    background: #000;
+    opacity: 0.5;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Input CIty bar */
+.city{
+    background:rgba(255,255,255,0.8);
+    padding: 15px 10px 15px 15px;
+    text-align: center;
+}
+.city .input-city{
+    height: 40px;
+    width: 600px;
+    max-width: 100%;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    padding: 10px;    
+    display: inline;
+}
+.city .btn{
+    height: 40px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    display: inline;
+    background: #fff;
+    color: #000;
+    margin-left: -2px;
+}
+
+/* Today forecast */
+.today-forecast{
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+.today-forecast .current-city{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.today-forecast .main-row{
+    margin-bottom: 10px;
+}
+.today-forecast .temperature{
+    font-size: 80px;
+    display: inline;
+}
+.today-forecast .weather-icon{
+    display: inline;
+    font-size: 60px;
+}
+.today-forecast .main-info{
+    font-size: 30px;    
+    margin-bottom: 10px;
+}
+.additional-row > div{
+    display: inline-block;
+    margin: 5px 10px;
+}
+/* Forecast on next 15 days */
+.day{
+    width: 240px;
+    height: 320px;
+    padding: 25px 30px 30px 30px;
+    float: left;
+    margin: 15px;
+    background: rgba(255,255,255,0.8);
+}
+.day .date{
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+.day .weather-icon{
+    text-align: center;  
+}
+.day .weather-icon i{
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+.day .temperature{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.day .main-info{
+    margin-bottom: 10px;
+}
