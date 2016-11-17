@@ -36,7 +36,7 @@ define("emberjs-weather/controllers/application", ["exports", "ember"], function
             var _that = this;
 
             //ask openweathermap.org server for data
-            _ember["default"].$.getJSON("http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&mode=json&units=metric&cnt=16&appid=08386da1df4f62f3426794b77cce7146", function (data) {
+            _ember["default"].$.getJSON("//api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&mode=json&units=metric&cnt=16&appid=08386da1df4f62f3426794b77cce7146", function (data) {
                 //callback with data
 
                 //if code of response is 200 - OK
@@ -348,11 +348,11 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
             "source": null,
             "start": {
               "line": 10,
-              "column": 5
+              "column": 1
             },
             "end": {
               "line": 47,
-              "column": 0
+              "column": 1
             }
           },
           "moduleName": "emberjs-weather/templates/application.hbs"
@@ -363,68 +363,70 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
         hasRendered: false,
         buildFragment: function buildFragment(dom) {
           var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("	");
+          dom.appendChild(el0, el1);
           var el1 = dom.createElement("div");
           dom.setAttribute(el1, "class", "today-forecast");
-          var el2 = dom.createTextNode("\n	");
+          var el2 = dom.createTextNode("\n		");
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("div");
           dom.setAttribute(el2, "class", "current-city");
-          var el3 = dom.createTextNode("\n		");
+          var el3 = dom.createTextNode("\n			");
           dom.appendChild(el2, el3);
           var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n	");
+          var el3 = dom.createTextNode("\n		");
           dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n	");
+          var el2 = dom.createTextNode("\n		");
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("div");
           dom.setAttribute(el2, "class", "main-row");
-          var el3 = dom.createTextNode("\n		");
+          var el3 = dom.createTextNode("\n			");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("div");
           dom.setAttribute(el3, "class", "weather-icon");
-          var el4 = dom.createTextNode("\n			");
+          var el4 = dom.createTextNode("\n				");
           dom.appendChild(el3, el4);
           var el4 = dom.createElement("i");
           dom.appendChild(el3, el4);
-          var el4 = dom.createTextNode("\n		");
+          var el4 = dom.createTextNode("\n			");
           dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n		");
+          var el3 = dom.createTextNode("\n			");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("div");
           dom.setAttribute(el3, "class", "temperature");
-          var el4 = dom.createTextNode("\n			");
+          var el4 = dom.createTextNode("\n				");
           dom.appendChild(el3, el4);
           var el4 = dom.createComment("");
           dom.appendChild(el3, el4);
-          var el4 = dom.createTextNode("\n		");
+          var el4 = dom.createTextNode("\n			");
           dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n	");
+          var el3 = dom.createTextNode("\n		");
           dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n	");
+          var el2 = dom.createTextNode("\n		");
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("div");
           dom.setAttribute(el2, "class", "main-info");
-          var el3 = dom.createTextNode("\n		");
+          var el3 = dom.createTextNode("\n			");
           dom.appendChild(el2, el3);
           var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n	");
+          var el3 = dom.createTextNode("\n		");
           dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n	");
+          var el2 = dom.createTextNode("\n		");
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("div");
           dom.setAttribute(el2, "class", "additional-row");
-          var el3 = dom.createTextNode("\n		");
+          var el3 = dom.createTextNode("\n			");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("div");
           dom.setAttribute(el3, "class", "rain");
-          var el4 = dom.createTextNode("\n			");
+          var el4 = dom.createTextNode("\n				");
           dom.appendChild(el3, el4);
           var el4 = dom.createElement("i");
           dom.setAttribute(el4, "class", "wi wi-umbrella");
@@ -433,14 +435,14 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
           dom.appendChild(el3, el4);
           var el4 = dom.createComment("");
           dom.appendChild(el3, el4);
-          var el4 = dom.createTextNode("%\n		");
+          var el4 = dom.createTextNode("%\n			");
           dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n		");
+          var el3 = dom.createTextNode("\n			");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("div");
           dom.setAttribute(el3, "class", "speed");
-          var el4 = dom.createTextNode("\n			");
+          var el4 = dom.createTextNode("\n				");
           dom.appendChild(el3, el4);
           var el4 = dom.createElement("i");
           dom.setAttribute(el4, "class", "wi wi-strong-wind");
@@ -449,14 +451,14 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
           dom.appendChild(el3, el4);
           var el4 = dom.createComment("");
           dom.appendChild(el3, el4);
-          var el4 = dom.createTextNode(" km/h\n		");
+          var el4 = dom.createTextNode(" km/h\n			");
           dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n		");
+          var el3 = dom.createTextNode("\n			");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("div");
           dom.setAttribute(el3, "class", "cloudy");
-          var el4 = dom.createTextNode("\n			");
+          var el4 = dom.createTextNode("\n				");
           dom.appendChild(el3, el4);
           var el4 = dom.createElement("i");
           dom.setAttribute(el4, "class", "wi wi-cloud");
@@ -465,21 +467,21 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
           dom.appendChild(el3, el4);
           var el4 = dom.createComment("");
           dom.appendChild(el3, el4);
-          var el4 = dom.createTextNode(" %\n		");
+          var el4 = dom.createTextNode(" %\n			");
           dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n	");
+          var el3 = dom.createTextNode("\n		");
           dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n	");
+          var el2 = dom.createTextNode("\n		");
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("div");
           dom.setAttribute(el2, "class", "additional-row");
-          var el3 = dom.createTextNode("\n		");
+          var el3 = dom.createTextNode("\n			");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("div");
           dom.setAttribute(el3, "class", "humidity");
-          var el4 = dom.createTextNode("\n			");
+          var el4 = dom.createTextNode("\n				");
           dom.appendChild(el3, el4);
           var el4 = dom.createElement("i");
           dom.setAttribute(el4, "class", "wi wi-humidity");
@@ -488,14 +490,14 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
           dom.appendChild(el3, el4);
           var el4 = dom.createComment("");
           dom.appendChild(el3, el4);
-          var el4 = dom.createTextNode(" %\n		");
+          var el4 = dom.createTextNode(" %\n			");
           dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n		");
+          var el3 = dom.createTextNode("\n			");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("div");
           dom.setAttribute(el3, "class", "pressure");
-          var el4 = dom.createTextNode("\n			");
+          var el4 = dom.createTextNode("\n				");
           dom.appendChild(el3, el4);
           var el4 = dom.createElement("i");
           dom.setAttribute(el4, "class", "wi wi-barometer");
@@ -504,16 +506,16 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
           dom.appendChild(el3, el4);
           var el4 = dom.createComment("");
           dom.appendChild(el3, el4);
-          var el4 = dom.createTextNode(" %\n		");
+          var el4 = dom.createTextNode(" %\n			");
           dom.appendChild(el3, el4);
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n	");
+          var el3 = dom.createTextNode("\n		");
           dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n");
+          var el2 = dom.createTextNode("\n	");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
+          var el1 = dom.createTextNode("\n	");
           dom.appendChild(el0, el1);
           var el1 = dom.createComment(" /.today ");
           dom.appendChild(el0, el1);
@@ -522,7 +524,7 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
           return el0;
         },
         buildRenderNodes: function buildRenderNodes(dom, fragment, contextualElement) {
-          var element2 = dom.childAt(fragment, [0]);
+          var element2 = dom.childAt(fragment, [1]);
           var element3 = dom.childAt(element2, [3]);
           var element4 = dom.childAt(element3, [1, 1]);
           var element5 = dom.childAt(element2, [7]);
@@ -539,7 +541,7 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
           morphs[8] = dom.createMorphAt(dom.childAt(element6, [3]), 3, 3);
           return morphs;
         },
-        statements: [["content", "currentCity", ["loc", [null, [13, 2], [13, 17]]], 0, 0, 0, 0], ["attribute", "class", ["concat", ["wi ", ["subexpr", "weather-icon", [["get", "today.weather.0.main", ["loc", [null, [17, 31], [17, 51]]], 0, 0, 0, 0]], [], ["loc", [null, [17, 16], [17, 53]]], 0, 0]], 0, 0, 0, 0, 0], 0, 0, 0, 0], ["inline", "temperature", [["get", "today.temp.day", ["loc", [null, [20, 17], [20, 31]]], 0, 0, 0, 0]], [], ["loc", [null, [20, 3], [20, 33]]], 0, 0], ["content", "today.weather.0.main", ["loc", [null, [24, 2], [24, 26]]], 0, 0, 0, 0], ["content", "today.rain", ["loc", [null, [28, 34], [28, 48]]], 0, 0, 0, 0], ["content", "today.speed", ["loc", [null, [31, 37], [31, 52]]], 0, 0, 0, 0], ["content", "today.clouds", ["loc", [null, [34, 31], [34, 47]]], 0, 0, 0, 0], ["content", "today.humidity", ["loc", [null, [39, 34], [39, 52]]], 0, 0, 0, 0], ["content", "today.pressure", ["loc", [null, [42, 35], [42, 53]]], 0, 0, 0, 0]],
+        statements: [["content", "currentCity", ["loc", [null, [13, 3], [13, 18]]], 0, 0, 0, 0], ["attribute", "class", ["concat", ["wi ", ["subexpr", "weather-icon", [["get", "today.weather.0.main", ["loc", [null, [17, 32], [17, 52]]], 0, 0, 0, 0]], [], ["loc", [null, [17, 17], [17, 54]]], 0, 0]], 0, 0, 0, 0, 0], 0, 0, 0, 0], ["inline", "temperature", [["get", "today.temp.day", ["loc", [null, [20, 18], [20, 32]]], 0, 0, 0, 0]], [], ["loc", [null, [20, 4], [20, 34]]], 0, 0], ["content", "today.weather.0.main", ["loc", [null, [24, 3], [24, 27]]], 0, 0, 0, 0], ["content", "today.rain", ["loc", [null, [28, 35], [28, 49]]], 0, 0, 0, 0], ["content", "today.speed", ["loc", [null, [31, 38], [31, 53]]], 0, 0, 0, 0], ["content", "today.clouds", ["loc", [null, [34, 32], [34, 48]]], 0, 0, 0, 0], ["content", "today.humidity", ["loc", [null, [39, 35], [39, 53]]], 0, 0, 0, 0], ["content", "today.pressure", ["loc", [null, [42, 36], [42, 54]]], 0, 0, 0, 0]],
         locals: [],
         templates: []
       };
@@ -552,11 +554,11 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
             "source": null,
             "start": {
               "line": 50,
-              "column": 1
+              "column": 2
             },
             "end": {
               "line": 68,
-              "column": 1
+              "column": 2
             }
           },
           "moduleName": "emberjs-weather/templates/application.hbs"
@@ -567,59 +569,59 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
         hasRendered: false,
         buildFragment: function buildFragment(dom) {
           var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("	");
+          var el1 = dom.createTextNode("		");
           dom.appendChild(el0, el1);
           var el1 = dom.createElement("div");
           dom.setAttribute(el1, "class", "day");
-          var el2 = dom.createTextNode("\n		");
+          var el2 = dom.createTextNode("\n			");
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("div");
           dom.setAttribute(el2, "class", "date");
-          var el3 = dom.createTextNode("\n			");
+          var el3 = dom.createTextNode("\n				");
           dom.appendChild(el2, el3);
           var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n		");
+          var el3 = dom.createTextNode("\n			");
           dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n		");
+          var el2 = dom.createTextNode("\n			");
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("div");
           dom.setAttribute(el2, "class", "weather-icon");
-          var el3 = dom.createTextNode("\n			");
+          var el3 = dom.createTextNode("\n				");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("i");
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n		");
+          var el3 = dom.createTextNode("\n			");
           dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n		");
+          var el2 = dom.createTextNode("\n			");
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("div");
           dom.setAttribute(el2, "class", "temperature");
-          var el3 = dom.createTextNode("\n			");
+          var el3 = dom.createTextNode("\n				");
           dom.appendChild(el2, el3);
           var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n		");
+          var el3 = dom.createTextNode("\n			");
           dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n		");
+          var el2 = dom.createTextNode("\n			");
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("div");
           dom.setAttribute(el2, "class", "main-info");
-          var el3 = dom.createTextNode("\n			");
+          var el3 = dom.createTextNode("\n				");
           dom.appendChild(el2, el3);
           var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode("\n		");
+          var el3 = dom.createTextNode("\n			");
           dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n		");
+          var el2 = dom.createTextNode("\n			");
           dom.appendChild(el1, el2);
           var el2 = dom.createElement("div");
           dom.setAttribute(el2, "class", "clouds");
-          var el3 = dom.createTextNode("\n			");
+          var el3 = dom.createTextNode("\n				");
           dom.appendChild(el2, el3);
           var el3 = dom.createElement("i");
           dom.setAttribute(el3, "class", "wi wi-cloud");
@@ -628,10 +630,10 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
           dom.appendChild(el2, el3);
           var el3 = dom.createComment("");
           dom.appendChild(el2, el3);
-          var el3 = dom.createTextNode(" %\n		");
+          var el3 = dom.createTextNode(" %\n			");
           dom.appendChild(el2, el3);
           dom.appendChild(el1, el2);
-          var el2 = dom.createTextNode("\n	");
+          var el2 = dom.createTextNode("\n		");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
@@ -649,7 +651,7 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
           morphs[4] = dom.createMorphAt(dom.childAt(element0, [9]), 3, 3);
           return morphs;
         },
-        statements: [["inline", "date", [["get", "day.dt", ["loc", [null, [53, 10], [53, 16]]], 0, 0, 0, 0]], [], ["loc", [null, [53, 3], [53, 18]]], 0, 0], ["attribute", "class", ["concat", ["wi ", ["subexpr", "weather-icon", [["get", "day.weather.0.main", ["loc", [null, [56, 31], [56, 49]]], 0, 0, 0, 0]], [], ["loc", [null, [56, 16], [56, 51]]], 0, 0]], 0, 0, 0, 0, 0], 0, 0, 0, 0], ["inline", "temperature", [["get", "day.temp.day", ["loc", [null, [59, 17], [59, 29]]], 0, 0, 0, 0]], [], ["loc", [null, [59, 3], [59, 31]]], 0, 0], ["content", "day.weather.0.main", ["loc", [null, [62, 3], [62, 25]]], 0, 0, 0, 0], ["content", "day.clouds", ["loc", [null, [65, 31], [65, 45]]], 0, 0, 0, 0]],
+        statements: [["inline", "date", [["get", "day.dt", ["loc", [null, [53, 11], [53, 17]]], 0, 0, 0, 0]], [], ["loc", [null, [53, 4], [53, 19]]], 0, 0], ["attribute", "class", ["concat", ["wi ", ["subexpr", "weather-icon", [["get", "day.weather.0.main", ["loc", [null, [56, 32], [56, 50]]], 0, 0, 0, 0]], [], ["loc", [null, [56, 17], [56, 52]]], 0, 0]], 0, 0, 0, 0, 0], 0, 0, 0, 0], ["inline", "temperature", [["get", "day.temp.day", ["loc", [null, [59, 18], [59, 30]]], 0, 0, 0, 0]], [], ["loc", [null, [59, 4], [59, 32]]], 0, 0], ["content", "day.weather.0.main", ["loc", [null, [62, 4], [62, 26]]], 0, 0, 0, 0], ["content", "day.clouds", ["loc", [null, [65, 32], [65, 46]]], 0, 0, 0, 0]],
         locals: ["day"],
         templates: []
       };
@@ -700,7 +702,7 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
         dom.appendChild(el1, el2);
         var el2 = dom.createComment("");
         dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
+        var el2 = dom.createTextNode("\n	");
         dom.appendChild(el1, el2);
         var el2 = dom.createElement("div");
         dom.setAttribute(el2, "class", "forecast");
@@ -708,8 +710,10 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
         dom.appendChild(el2, el3);
         var el3 = dom.createComment("");
         dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("	");
+        dom.appendChild(el2, el3);
         dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
+        var el2 = dom.createTextNode("\n	");
         dom.appendChild(el1, el2);
         var el2 = dom.createComment(" /.forecast ");
         dom.appendChild(el1, el2);
@@ -733,7 +737,7 @@ define("emberjs-weather/templates/application", ["exports"], function (exports) 
         morphs[3] = dom.createMorphAt(dom.childAt(element7, [5]), 1, 1);
         return morphs;
       },
-      statements: [["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "city", ["loc", [null, [4, 16], [4, 20]]], 0, 0, 0, 0]], [], [], 0, 0], "class", "input-city", "type", "text", "placeholder", "City"], ["loc", [null, [4, 2], [4, 72]]], 0, 0], ["element", "action", ["showMeWather", ["get", "city", ["loc", [null, [5, 46], [5, 50]]], 0, 0, 0, 0]], [], ["loc", [null, [5, 22], [5, 52]]], 0, 0], ["block", "if", [["get", "today", ["loc", [null, [10, 11], [10, 16]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [10, 5], [47, 7]]]], ["block", "each", [["get", "forecast", ["loc", [null, [50, 9], [50, 17]]], 0, 0, 0, 0]], [], 1, null, ["loc", [null, [50, 1], [68, 10]]]]],
+      statements: [["inline", "input", [], ["value", ["subexpr", "@mut", [["get", "city", ["loc", [null, [4, 16], [4, 20]]], 0, 0, 0, 0]], [], [], 0, 0], "class", "input-city", "type", "text", "placeholder", "City"], ["loc", [null, [4, 2], [4, 72]]], 0, 0], ["element", "action", ["showMeWather", ["get", "city", ["loc", [null, [5, 46], [5, 50]]], 0, 0, 0, 0]], [], ["loc", [null, [5, 22], [5, 52]]], 0, 0], ["block", "if", [["get", "today", ["loc", [null, [10, 7], [10, 12]]], 0, 0, 0, 0]], [], 0, null, ["loc", [null, [10, 1], [47, 8]]]], ["block", "each", [["get", "forecast", ["loc", [null, [50, 10], [50, 18]]], 0, 0, 0, 0]], [], 1, null, ["loc", [null, [50, 2], [68, 11]]]]],
       locals: [],
       templates: [child0, child1]
     };
@@ -775,7 +779,7 @@ catch(err) {
 /* jshint ignore:start */
 
 if (!runningTests) {
-  require("emberjs-weather/app")["default"].create({"name":"emberjs-weather","version":"0.0.0+9b2b0c52"});
+  require("emberjs-weather/app")["default"].create({"name":"emberjs-weather","version":"0.0.0+8120bb64"});
 }
 
 /* jshint ignore:end */

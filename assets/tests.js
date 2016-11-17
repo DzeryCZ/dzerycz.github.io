@@ -195,28 +195,6 @@ define('emberjs-weather/tests/unit/controllers/application-test.jshint', ['expor
     assert.ok(true, 'unit/controllers/application-test.js should pass jshint.');
   });
 });
-define('emberjs-weather/tests/unit/models/forecast-test', ['exports', 'ember-qunit'], function (exports, _emberQunit) {
-
-  (0, _emberQunit.moduleForModel)('forecast', 'Unit | Model | forecast', {
-    // Specify the other units that are required for this test.
-    needs: []
-  });
-
-  (0, _emberQunit.test)('it exists', function (assert) {
-    var model = this.subject();
-    // let store = this.store();
-    assert.ok(!!model);
-  });
-});
-define('emberjs-weather/tests/unit/models/forecast-test.jshint', ['exports'], function (exports) {
-  'use strict';
-
-  QUnit.module('JSHint | unit/models/forecast-test.js');
-  QUnit.test('should pass jshint', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'unit/models/forecast-test.js should pass jshint.');
-  });
-});
 /* jshint ignore:start */
 
 require('emberjs-weather/tests/test-helper');
